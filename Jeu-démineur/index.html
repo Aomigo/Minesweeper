@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Démineur</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+</head>
+
+<body class="body">
+    <div class="game-over hidden">
+        GAME OVER
+    </div>
+    <div class="you-win hidden">
+        YOU WIN !
+    </div>
+    <div class="text">
+        <h1>Le jeu du démineur</h1>
+        <h3>Choisir sa difficulté : </h3>
+        <div class="difficulty">
+            <p class="easy">1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+        </div>
+        <div class="nb-bomb">
+            <div class="difficulty-of-grid"></div>
+            <p>Nombre de bombes : <span class="nb"></span></p>
+        </div>
+    </div>
+    <div class="grids">
+        <div class="easy grid" id="grid"></div>
+        <div class="medium grid hidden"></div>
+        <div class="hard grid hidden"></div>
+        <div class="god grid hidden"></div>
+    </div>
+</body>
+<script src="assets/js/app.js"></script>
+
+</html>

@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+* {
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hidden {
+    display: none;
+}
+
+.game-over,
+.you-win {
+    position: relative;
+    top: 500px;
+    left: 23%;
+    z-index: 10;
+    font-size: 120px;
+    /* transition: 3s cubic-bezier(.82,.4,.56,1.63); */
+
+    /* rotate: 360deg; */
+
+    
+}
+
+.game-over {
+    animation: 3s cubic-bezier(.39,-0.75,.88,1.98) 0s rotate, falling 7s 3s;
+}
+
+.you-win {
+    animation: 4s cubic-bezier(1,-1.2,.25,2.34) 0s rotate, stomp 2s 4s;
+    left: 27%;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes falling {
+    0% {
+        top: 500px;
+    }
+
+    10% {
+        top: 400px;
+    }
+
+    100% {
+        top: 3000px;
+    }
+}
+
+@keyframes stomp {
+    0% {
+        top: 500px;
+    }
+
+    95% {
+        top: 350px;
+    }
+
+    97% {
+        top: 540px;
+    }
+
+    100% {
+        top: 500px;
+    }
+}
+
+
+
+h3,
+.nb-bomb {
+    font-size: 25px;
+}
+
+.text {
+    text-align: center;
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.difficulty p {
+    margin-right: 15px;
+    padding-top: 10px;
+    width: 40px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 2px;
+    border-top: 4px solid rgb(163, 163, 163);
+    border-left: 4px solid rgb(163, 163, 163);
+    border-right: 4px solid rgb(104, 104, 104);
+    border-bottom: 4px solid rgb(104, 104, 104);
+    color: white;
+    cursor: pointer;
+}
+
+.difficulty :hover {
+    border-bottom: 4px solid rgb(163, 163, 163);
+    border-right: 4px solid rgb(163, 163, 163);
+    border-left: 4px solid rgb(104, 104, 104);
+    border-top: 4px solid rgb(104, 104, 104);
+}
+
+
+.grids .grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+    height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tiles {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px ;
+    background-color: gray;
+    border-top: 4px solid rgb(163, 163, 163);
+    border-left: 4px solid rgb(163, 163, 163);
+    border-right: 4px solid rgb(104, 104, 104);
+    border-bottom: 4px solid rgb(104, 104, 104);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.x1,
+.x2,
+.x3,
+.x4,
+.x5,
+.x6,
+.x7,
+.x8,
+.bomb,
+.clicked {
+    background-color: rgb(190, 190, 190);
+    border-bottom: 4px solid rgb(163, 163, 163);
+    border-right: 4px solid rgb(163, 163, 163);
+    border-left: 4px solid rgb(104, 104, 104);
+    border-top: 4px solid rgb(104, 104, 104);
+}
+
+.x1 {
+    color: blue;
+}
+
+.x2 {
+    color: green;
+}
+
+.x3 {
+    color: red;
+}
+
+.x4 {
+    color: darkblue;
+}
+
+.x5 {
+    color: magenta;
+}
+
+.x6 {
+    color: greenyellow;
+}
+
+.x7 {
+    color: black;
+}
+
+.x8 {
+    color: rgb(185, 185, 185);
+}
+
+.bomb {
+    background: url("../images/Mine.png");
+    background-position: center;
+    background-size: contain;
+    background-color: rgb(190, 190, 190);
+    width: 40px;
+    height: 40px;
+}
+
+.flag {
+    background: url("../images/Flag.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: gray;
+    width: 40px;
+    height: 40px;
+}
